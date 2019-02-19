@@ -4,8 +4,8 @@
     <color name="colorPrimary">#2B7CF3</color>
     <color name="colorPrimaryDark">#4364EB</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="backSecondary">#FFBA09</color>
-    <color name="backTertiary">#FF6A09</color>
+    <color name="backSecondary">#ff9a00</color>
+    <color name="backTertiary">#ff4d00</color>
 
     <color name="pureWhite">#FFFFFF</color>
     <color name="greyishWhite">#C0C0C0</color>
