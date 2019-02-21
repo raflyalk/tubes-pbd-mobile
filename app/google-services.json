@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "590827736968-l5d946d8mlmf712vd6d5v7p27juhacop.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.freya",
+            "certificate_hash": "d19ac8dea1fa10babe8dd24242c116c1e0b9f9c8"
+          }
+        },
+        {
           "client_id": "590827736968-fhofl7hrndlo9v16jdtid6ggqv5gbpr9.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "590827736968-fhofl7hrndlo9v16jdtid6ggqv5gbpr9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
