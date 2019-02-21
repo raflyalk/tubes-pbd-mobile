@@ -21,6 +21,10 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_login.*
 import java.util.*
 
@@ -31,7 +35,8 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
-    private var mDatabase = null;
+    private var mAuth = FirebaseAuth.getInstance()
+    private var mDatabase = FirebaseDatabase.getInstance()
     private var mAuthTask: UserLoginTask? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,8 +51,22 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
             }
             false
         })
-
         btn_login.setOnClickListener { attemptLogin() }
+
+        // Configure sign-in to request the user's ID, email address, and basic
+        // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
+        var gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build()
+
+        //Build a GoogleSignInClient with the options specified by gso
+        var mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        var account = GoogleSignIn.getLastSignedInAccount(this)
+        //Update UI
+        var currentUser = mAuth.currentUser
+
     }
 
     private fun populateAutoComplete() {

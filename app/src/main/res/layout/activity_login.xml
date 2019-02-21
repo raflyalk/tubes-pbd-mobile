@@ -76,16 +76,32 @@
                         android:hint="@string/prompt_password"/>
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.v7.widget.AppCompatButton
-                    android:id="@+id/btn_login"
-                    android:layout_width="fill_parent"
+
+            <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginBottom="24dp"
-                    android:padding="12dp"
-                    android:textColor="@color/pureWhite"
-                    android:background="@color/backTertiary"
-                    android:text="@string/action_login"/>
+                    android:orientation="vertical">
+                <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_login"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="12dp"
+                        android:textColor="@color/pureWhite"
+                        android:background="@color/backTertiary"
+                        android:textAlignment="center"
+                        android:text="@string/action_login"/>
+                <com.google.android.gms.common.SignInButton
+                        android:id="@+id/sign_in_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"/>
+
+            </LinearLayout>
+
 
             <TextView
                     android:id="@+id/link_signup"
