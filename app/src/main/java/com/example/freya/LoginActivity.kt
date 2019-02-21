@@ -4,12 +4,18 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.SignInButton
+import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
@@ -21,6 +27,10 @@ import com.google.firebase.auth.FirebaseAuth
 
 
 class LoginActivity : AppCompatActivity() {
+    companion object {
+        private val TAG = "ClassName"
+        private val RC_SIGN_IN = 9001
+    }
     private lateinit var inputEmail: EditText
     private lateinit var inputPassword: EditText
     private lateinit var btnLogin: Button
@@ -28,6 +38,8 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var btnResetPassword: Button
     private lateinit var progressBar: ProgressBar
     private lateinit var auth: FirebaseAuth
+    private lateinit var mGoogleSignInClient: GoogleSignInClient
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -81,9 +93,58 @@ class LoginActivity : AppCompatActivity() {
         })
 
         //Configure Google Sign In Masih Error
-//        var gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-//            .requestIdToken(getString(R.string.default_web_client_id))
-//            .requestEmail()
-//            .build()
+        var gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestEmail()
+            .build()
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
+
+        findViewById<SignInButton>(R.id.sign_in_button).setOnClickListener(googleSignListener)
+    }
+
+    fun onClick(v: View) {
+        if (v.id == R.id.sign_in_button) {
+            signIn()
+        }
+    }
+
+    private val googleSignListener = View.OnClickListener() {
+        fun onClick(v: View) {
+
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        var account = GoogleSignIn.getLastSignedInAccount(this)
+        updateUI(account)
+    }
+
+    private fun signIn() {
+        val signInIntent = mGoogleSignInClient.signInIntent
+        startActivityForResult(signInIntent, RC_SIGN_IN)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == RC_SIGN_IN) {
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            handleSignInResult(task)
+        }
+    }
+
+    private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
+        try {
+            val account = completedTask.getResult(ApiException::class.java)
+
+            updateUI(account)
+        } catch (e: ApiException) {
+            Log.w(TAG, "signInResult:failed code=" + e.getStatusCode())
+            updateUI(null)
+        }
+    }
+
+    fun updateUI(account: GoogleSignInAccount?) {
+        //UI Update
     }
 }

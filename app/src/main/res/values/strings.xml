@@ -16,7 +16,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
     <string name="minimum_password">6</string>
     <string name="auth_failed">Authentication Failed</string>
-    <!--<string name="default_web_client_id">362033913045-tgob5limgvur42g90sati3p201svkk6i.apps.googleusercontent.com</string>-->
+    <string name="def_web_client_id">362033913045-tgob5limgvur42g90sati3p201svkk6i.apps.googleusercontent.com</string>
 
     <!-- Description String -->
     <string name="logo_desc">Freya Logo</string>
