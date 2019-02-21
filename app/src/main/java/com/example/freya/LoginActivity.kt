@@ -33,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        var auth = FirebaseAuth.getInstance()
+        val auth = FirebaseAuth.getInstance()
 
         if (auth.currentUser != null) {
             startActivity(Intent(this, MainActivity::class.java))
@@ -46,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
 
         btnLogin.setOnClickListener(View.OnClickListener {
             fun onClick(v: View) {
-                var email = inputEmail.text.toString()
+                val email = inputEmail.text.toString()
                 val password = inputPassword.text.toString()
 
                 if (TextUtils.isEmpty(email)) {
@@ -71,9 +71,9 @@ class LoginActivity : AppCompatActivity() {
                                     Toast.makeText(this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show()
                                 }
                             } else {
-                                var intent = Intent(this, MainActivity::class.java)
-
-
+                                val intent = Intent(this, MainActivity::class.java)
+                                startActivity(intent)
+                                finish()
                             }
                         }
                     })
