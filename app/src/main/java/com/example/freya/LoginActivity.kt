@@ -29,7 +29,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
     companion object {
-        private val TAG = "ClassName"
+        private val TAG = "LoginClass"
         private val RC_SIGN_IN = 9001
     }
     private lateinit var inputEmail: EditText
@@ -79,7 +79,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    //Login Email Masih error
+    //Login Email
     fun loginButtonOnClick() {
         val email = inputEmail.text.toString()
         val password = inputPassword.text.toString()
@@ -156,18 +156,18 @@ class LoginActivity : AppCompatActivity() {
 
     private fun validateForm(): Boolean {
         var result = true
-        if (TextUtils.isEmpty(email.text)) {
-            email.setError("Required")
+        if (TextUtils.isEmpty(inputEmail.text)) {
+            inputEmail.setError("Required")
             result = false
         } else {
-            email.setError(null)
+            inputEmail.setError(null)
         }
 
-        if (TextUtils.isEmpty(password.text.toString())) {
-            password.setError("Required")
+        if (TextUtils.isEmpty(inputPassword.text.toString())) {
+            inputPassword.setError("Required")
             result = false
         } else {
-            password.setError(null)
+            inputPassword.setError(null)
         }
         return result
     }
