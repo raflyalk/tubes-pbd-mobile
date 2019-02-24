@@ -24,4 +24,5 @@
     <!-- Description String -->
     <string name="logo_desc">Freya Logo</string>
     <string name="title_activity_register">Register</string>
+    <string name="sign_out">Sign Out</string>
 </resources>

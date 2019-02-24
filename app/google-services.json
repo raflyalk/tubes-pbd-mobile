@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "590827736968-qdtlc0quk3dl3rdr2u1j8j7g7t44vhj8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.freya",
+            "certificate_hash": "a7429d999d9736e7659cb0f62d507718dbbb56aa"
+          }
+        },
+        {
           "client_id": "590827736968-fhofl7hrndlo9v16jdtid6ggqv5gbpr9.apps.googleusercontent.com",
           "client_type": 3
         }
