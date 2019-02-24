@@ -9,21 +9,15 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
-import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.SignInButton
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import android.support.design.widget.Snackbar
-
 import kotlinx.android.synthetic.main.activity_register.*
-import java.lang.Exception
 
 class Register : AppCompatActivity() {
 
@@ -53,8 +47,8 @@ class Register : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
-        btnRegister = findViewById(R.id.sign_in_button)
-        inputEmail = findViewById(R.id.email)
+        btnRegister = findViewById(R.id.btn_register)
+        inputEmail = findViewById(R.id.email_register)
         inputPassword = findViewById(R.id.password)
         inputConfirmPassword = findViewById(R.id.passwordConfirm)
 
@@ -98,6 +92,7 @@ class Register : AppCompatActivity() {
         if (!validateForm()) {
             return
         }
+        println("Masuk")
 
         auth.createUserWithEmailAndPassword(n_email, n_password)
             .addOnCompleteListener(this, OnCompleteListener<AuthResult>() { task: Task<AuthResult> ->

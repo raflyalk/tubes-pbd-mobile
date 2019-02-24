@@ -5,10 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.TextUtils
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
-import android.widget.Toast
+import android.widget.*
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -20,7 +17,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_login.*
 
 /**
  * A login screen that offers login via email/password.
@@ -35,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var inputEmail: EditText
     private lateinit var inputPassword: EditText
     private lateinit var btnLogin: Button
-    private lateinit var btnSignUp: Button
+    private lateinit var btnSignUp: TextView
     private lateinit var btnResetPassword: Button
     private lateinit var progressBar: ProgressBar
     private lateinit var auth: FirebaseAuth
@@ -61,10 +57,15 @@ class LoginActivity : AppCompatActivity() {
         inputPassword = findViewById(R.id.password)
         progressBar = findViewById(R.id.progressBar)
         btnGoogleLogin = findViewById(R.id.sign_in_button)
+        btnSignUp = findViewById(R.id.link_signup)
 
 
         btnLogin.setOnClickListener {
             loginButtonOnClick()
+        }
+
+        btnSignUp.setOnClickListener {
+            startActivity(Intent(this, Register::class.java))
         }
 
 
@@ -116,15 +117,23 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Log.d(TAG, "signInWithEmail:success")
                     val firebaseUser = auth.currentUser!!
-//                    updateUI(firebaseUser)
+                    updateUI(firebaseUser)
                 } else {
                     Log.w(TAG, "signInWithEmail:failure", task.getException())
                     Toast.makeText(this, "Authentication failed.", Toast.LENGTH_SHORT).show()
-//                    updateUI(null)
+                    updateUI(null)
                 }
             })
     }
 
+    fun updateUI(user: FirebaseUser?) {
+        if (user == null) {
+            return
+        } else {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+    }
     //
     override fun onStart() {
         super.onStart()
@@ -134,6 +143,8 @@ class LoginActivity : AppCompatActivity() {
     private fun googleSignIn() {
         val signInIntent = mGoogleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 
     private fun onAuthSuccess(user: FirebaseUser) {
