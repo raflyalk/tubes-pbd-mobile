@@ -6,7 +6,9 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.app.AppCompatDelegate
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -47,6 +49,13 @@ class MainActivity : AppCompatActivity() , SensorEventListener, GoogleApiClient.
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        var sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
+        var darkMode = sharedPref.getBoolean("example_switch", false)
+        if (darkMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
         setContentView(R.layout.activity_main)
 
         latestFireBtn = findViewById(R.id.latest_fire_btn)

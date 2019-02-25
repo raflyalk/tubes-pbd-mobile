@@ -2,7 +2,9 @@ package com.example.freya
 
 import android.location.Geocoder
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.app.AppCompatDelegate
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -24,6 +26,13 @@ class LatestFireActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        var sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
+        var darkMode = sharedPref.getBoolean("example_switch", false)
+        if (darkMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
         setContentView(R.layout.activity_latest_fire)
         view = findViewById<View>(R.id.view) as Button
         recycle = findViewById<View>(R.id.recycle) as RecyclerView

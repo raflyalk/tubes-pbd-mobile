@@ -41,7 +41,6 @@ class TemperatureCheckActivity : AppCompatActivity(), SensorEventListener {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
-//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         setContentView(R.layout.activity_temperature_check)
 
         mSensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
@@ -51,29 +50,6 @@ class TemperatureCheckActivity : AppCompatActivity(), SensorEventListener {
         if (mSensorTemperature == null) {
             mTextSensorTemperature!!.text = sensor_error
         }
-
-//        val switchCompat = findViewById<SwitchCompat>(R.id.switchCompat)
-//
-//        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES)
-//            switchCompat.setChecked(true)
-//
-//        switchCompat.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
-//            if (isChecked) {
-//                InitApplication.getInstance().setIsNightModeEnabled(true)
-//                val intent = intent
-//                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
-//                finish()
-//                startActivity(intent)
-//
-//            } else {
-//                InitApplication.getInstance().setIsNightModeEnabled(false)
-//                val intent = intent
-//                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
-//                finish()
-//                startActivity(intent)
-//            }
-//        })
-
     }
 
     override fun onStart() {

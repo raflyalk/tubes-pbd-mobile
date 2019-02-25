@@ -14,6 +14,7 @@ import android.preference.PreferenceActivity
 import android.preference.PreferenceFragment
 import android.preference.PreferenceManager
 import android.preference.RingtonePreference
+import android.support.v7.app.AppCompatDelegate
 import android.text.TextUtils
 import android.view.MenuItem
 
@@ -31,6 +32,13 @@ class SettingsActivity : AppCompatPreferenceActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        var sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
+        var darkMode = sharedPref.getBoolean("example_switch", false)
+        if (darkMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
         setupActionBar()
     }
 

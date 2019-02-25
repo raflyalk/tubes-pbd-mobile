@@ -2,7 +2,9 @@ package com.example.freya
 
 import android.content.Intent
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.app.AppCompatDelegate
 import android.text.TextUtils
 import android.util.Log
 import android.widget.*
@@ -57,6 +59,13 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        var sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
+        var darkMode = sharedPref.getBoolean("example_switch", false)
+        if (darkMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
         setContentView(R.layout.activity_login)
 
         mDatabaseRef = FirebaseDatabase.getInstance().getReference()
