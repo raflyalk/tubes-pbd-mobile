@@ -32,4 +32,6 @@
     <string name="fire_icon">Place Unsafe</string>
     <string name="fireextinct_icon">Safety Instructions</string>
     <string name="firealarm_icon">Warn Fire</string>
+    <string name="settings_icon">Settings</string>
+    <string name="temperature_icon">Check Temperature</string>
 </resources>
