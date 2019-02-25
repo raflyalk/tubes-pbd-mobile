@@ -32,7 +32,7 @@ class RecyclerAdapter(lst: List<ReportModel>, cntx: Context) : RecyclerView.Adap
 
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): RecyclerAdapter.MyHolder {
-        val view = LayoutInflater.from(p0.context).inflate(R.layout.fire_card, null, false)
+        val view = LayoutInflater.from(p0.context).inflate(R.layout.fire_card, p0, false)
         view.layoutParams = RecyclerView.LayoutParams(
             RecyclerView.LayoutParams.MATCH_PARENT,
             RecyclerView.LayoutParams.WRAP_CONTENT

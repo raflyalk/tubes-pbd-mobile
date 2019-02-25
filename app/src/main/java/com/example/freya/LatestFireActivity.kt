@@ -60,7 +60,7 @@ class LatestFireActivity : AppCompatActivity() {
     fun updateRecyclerView() {
         try {
             val recyclerAdapter = RecyclerAdapter(list, this@LatestFireActivity)
-            val recyce = GridLayoutManager(this@LatestFireActivity, 2)
+            val recyce = GridLayoutManager(this@LatestFireActivity, 1)
 
             /// RecyclerView.LayoutManager recyce = new LinearLayoutManager(MainActivity.this);
             // recycle.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
