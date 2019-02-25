@@ -108,4 +108,7 @@
 
     <string name="settings_icon">Settings</string>
     <string name="temperature_icon">Check Temperature</string>
+    <string name="current_temperature">Current Temperature</string>
+    <string name="error_no_sensor">No sensor</string>
+    <string name="label_temperature">%1$.1f°C</string>
 </resources>
