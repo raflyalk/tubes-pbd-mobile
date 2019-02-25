@@ -1,5 +1,6 @@
 package com.example.freya
 
+import android.location.Geocoder
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DefaultItemAnimator
@@ -10,6 +11,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.GeoPoint
+import java.util.*
 
 
 class LatestFireActivity : AppCompatActivity() {
@@ -24,6 +27,7 @@ class LatestFireActivity : AppCompatActivity() {
         setContentView(R.layout.activity_latest_fire)
         view = findViewById<View>(R.id.view) as Button
         recycle = findViewById<View>(R.id.recycle) as RecyclerView
+
         db = FirebaseFirestore.getInstance()
 
         fetchData()
@@ -60,7 +64,7 @@ class LatestFireActivity : AppCompatActivity() {
     fun updateRecyclerView() {
         try {
             val recyclerAdapter = RecyclerAdapter(list, this@LatestFireActivity)
-            val recyce = GridLayoutManager(this@LatestFireActivity, 2)
+            val recyce = GridLayoutManager(this@LatestFireActivity, 1)
 
             /// RecyclerView.LayoutManager recyce = new LinearLayoutManager(MainActivity.this);
             // recycle.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
