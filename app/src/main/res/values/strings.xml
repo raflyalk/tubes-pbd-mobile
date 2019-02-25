@@ -21,8 +21,15 @@
     <string name="auth_failed">Authentication Failed</string>
     <string name="def_web_client_id">362033913045-tgob5limgvur42g90sati3p201svkk6i.apps.googleusercontent.com</string>
 
+    <!-- Strings related to Main Activity -->
+    <string name="title_application">FREYA</string>
+
     <!-- Description String -->
     <string name="logo_desc">Freya Logo</string>
     <string name="title_activity_register">Register</string>
     <string name="sign_out">Sign Out</string>
+    <string name="firefighter_icon">Firefighter Near You</string>
+    <string name="fire_icon">Place Unsafe</string>
+    <string name="fireextinct_icon">Safety Instructions</string>
+    <string name="firealarm_icon">Warn Fire</string>
 </resources>
