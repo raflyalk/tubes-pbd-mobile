@@ -117,4 +117,10 @@
     <string name="default_subject">Ada Kebakaran</string>
     <string name="default_body">Halo Dunia</string>
 
+    <!--String Related to LatestFireActivity-->
+    <string name="locationLabel">Location</string>
+    <string name="dateLabel">Date and Time</string>
+    <string name="temperatureLabel">Temperature</string>
+    <string name="userLabel">Reported By</string>
+
 </resources>
