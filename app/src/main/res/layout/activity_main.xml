@@ -26,6 +26,7 @@
                         android:paddingRight="20dp"
                         android:weightSum="2">
                     <LinearLayout
+                            android:id="@+id/latest_fire_btn"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="160dp"
@@ -48,6 +49,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                            android:id="@+id/firefighter_btn"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="160dp"
@@ -79,6 +81,7 @@
                             android:paddingRight="20dp"
                             android:weightSum="2">
                         <LinearLayout
+                                android:id="@+id/first_aid_btn"
                                 android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="160dp"
@@ -100,6 +103,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                                android:id="@+id/report_btn"
                                 android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="160dp"
@@ -134,6 +138,7 @@
                             android:paddingRight="20dp"
                             android:weightSum="2">
                         <LinearLayout
+                                android:id="@+id/check_temp_btn"
                                 android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="160dp"
@@ -155,6 +160,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                                android:id="@+id/settings_btn"
                                 android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="160dp"
