@@ -5,4 +5,22 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="card_album_radius">5dp</dimen>
     <dimen name="card_margin">15dp</dimen>
+
+    <dimen name="front_logo_height">300dp</dimen>
+    <dimen name="front_logo_width">300dp</dimen>
+    <dimen name="home_main_margin_horizontal">20dp</dimen>
+    <dimen name="home_main_margin_vertical">10dp</dimen>
+    <dimen name="home_object_margin_vertical">10dp</dimen>
+    <dimen name="home_object_padding">10dp</dimen>
+    <dimen name="home_object_image_height">128dp</dimen>
+    <dimen name="lesson_main_margin_horizontal">20dp</dimen>
+    <dimen name="lesson_main_margin_vertical">10dp</dimen>
+    <dimen name="lesson_object_margin_vertical">5dp</dimen>
+    <dimen name="lesson_object_padding">10dp</dimen>
+    <dimen name="lesson_object_image_height">200dp</dimen>
+
+    <dimen name="fontsize_home_title">20sp</dimen>
+    <dimen name="fontsize_home_body">14sp</dimen>
+    <dimen name="fontsize_lesson_title">24sp</dimen>
+    <dimen name="fontsize_lesson_body">14sp</dimen>
 </resources>

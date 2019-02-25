@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2B7CF3</color>
+    <color name="colorPrimaryDark">#4364EB</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="orangeDark">#F77000</color>
+    <color name="orange">#FF8200</color>
+    <color name="daynight_textColor">#6CBABB</color>
+
+    <color name="switchColor">#BC2F1D</color>
+</resources>

@@ -123,4 +123,23 @@
     <string name="temperatureLabel">Temperature</string>
     <string name="userLabel">Reported By</string>
 
+
+    <string name="lesson_2_title">Luka Bakar Ringan</string>
+
+    <string name="lesson_2_1_title">1. Alirkan air dingin ke atas luka</string>
+    <string name="lesson_2_1_body">Segera alirkan air ke atas luka bakar. Jangan gunakan air es.</string>
+    <string name="lesson_2_2_title">2. Segera lepaskan pakaian atau perhiasan ketat</string>
+    <string name="lesson_2_2_body">Segera lepaskan benda apa pun yang menghalangi kulit di sekitar luka bakar.</string>
+    <string name="lesson_2_3_title">3. Beri kompres dingin</string>
+    <string name="lesson_2_3_body">Jika tidak ada air dingin, gunakanlah kompres dingin atau es yang dibungkus dengan handuk.</string>
+    <string name="lesson_2_4_title">4. Minum pereda rasa sakit</string>
+    <string name="lesson_2_4_body">Obat pereda rasa sakit bisa membantu jika gejala luka bakar cukup mengganggu Anda.</string>
+    <string name="lesson_2_5_title">5. Bersihkan luka</string>
+    <string name="lesson_2_5_body">Setelah mencuci tangan, gunakanlah sabun dan air untuk membersihkan luka dan mencegah infeksi.</string>
+    <string name="lesson_2_6_title">6. Balut luka dengan kain kasa</string>
+    <string name="lesson_2_6_body">Jika terkena luka bakar derajat dua, balut luka dengan kain kasa perlahan-lahan dan rekatkan dengan selotip medis.</string>
+    <string name="lesson_2_7_title">7. Hindari penggunaan obat rumahan</string>
+    <string name="lesson_2_7_body">Obat rumahan seperti putih telur, mentega, dan teh dapat "memperparah" luka karena mengandung bakteri pemicu infeksi.</string>
+    <string name="lesson_2_8_title">8. Waspadai terjadinya infeksi pada luka</string>
+    <string name="lesson_2_8_body">Luka yang tidak kunjung sembuh bisa menjadi pertanda komplikasi, infeksi, atau luka bakar yang lebih serius.</string>
 </resources>

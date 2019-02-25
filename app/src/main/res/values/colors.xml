@@ -15,4 +15,7 @@
     <color name="turquoise">#46C7E7</color>
     <color name="cornflower_blue">#4B6CF3</color>
     <color name="greyishBlue">#CED8EE</color>
+    
+    <color name="daynight_textColor">#6CBABB</color>
+    <color name="switchColor">#911DEE</color>
 </resources>
