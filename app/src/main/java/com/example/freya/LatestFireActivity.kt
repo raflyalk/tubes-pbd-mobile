@@ -9,73 +9,66 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
-import com.google.firebase.database.*
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class LatestFireActivity : AppCompatActivity() {
 
-    lateinit var database: FirebaseDatabase
-    lateinit var myRef: DatabaseReference
     lateinit var list: MutableList<ReportModel>
     lateinit var recycle: RecyclerView
     lateinit var view: Button
+    lateinit var db: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_latest_fire)
         view = findViewById<View>(R.id.view) as Button
         recycle = findViewById<View>(R.id.recycle) as RecyclerView
-        database = FirebaseDatabase.getInstance()
-        myRef = database.getReference("reports/")
+        db = FirebaseFirestore.getInstance()
 
-        myRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                list = ArrayList<ReportModel>()
-                for (dataSnapshot1 in dataSnapshot.children) {
-
-                    val value = dataSnapshot1.getValue(ReportModel::class.java)
-                    val fire = ReportModel()
-                    val location = value?.location
-                    val date = value?.date
-                    val temperature = value?.temperature
-                    val user = value?.user
-                    fire.location = location
-                    fire.date = date
-                    fire.temperature = temperature
-                    fire.user = user
-                    list.add(fire)
-
-                }
-
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
-                Log.w("Hello", "Failed to read value.", error.toException())
-            }
-        })
-
+        fetchData()
 
         view.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View) {
-                try {
-                    val recyclerAdapter = RecyclerAdapter(list, this@LatestFireActivity)
-                    val recyce = GridLayoutManager(this@LatestFireActivity, 2)
-                    /// RecyclerView.LayoutManager recyce = new LinearLayoutManager(MainActivity.this);
-                    // recycle.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
-                    recycle.layoutManager = recyce
-                    recycle.itemAnimator = DefaultItemAnimator()
-                    recycle.adapter = recyclerAdapter
-                } catch (e: Exception) {
-                    Toast.makeText(this@LatestFireActivity, "No Data Received", Toast.LENGTH_SHORT).show()
-                }
-
-
+                fetchData()
             }
         })
+    }
 
+    private fun fetchData() {
+        db.collection("reports")
+            .get()
+            .addOnSuccessListener { result ->
+                list = ArrayList()
+                for (document in result) {
+                    val fire = ReportModel()
 
+                    fire.location = document.data["Location"].toString()
+                    fire.date = document.data["Date"].toString()
+                    fire.temperature = document.data["Temperature"].toString()
+                    fire.user = document.data["User"].toString()
+                    list.add(fire)
+                    Log.d("datatata", document.id + " => " + document.data)
+                }
+                updateRecyclerView()
+            }
+            .addOnFailureListener { exception ->
+                Log.w("datatata", "Error getting documents.", exception)
+            }
+    }
+
+    fun updateRecyclerView() {
+        try {
+            val recyclerAdapter = RecyclerAdapter(list, this@LatestFireActivity)
+            val recyce = GridLayoutManager(this@LatestFireActivity, 2)
+
+            /// RecyclerView.LayoutManager recyce = new LinearLayoutManager(MainActivity.this);
+            // recycle.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
+            recycle.layoutManager = recyce
+            recycle.itemAnimator = DefaultItemAnimator()
+            recycle.adapter = recyclerAdapter
+        } catch (e: Exception) {
+            Toast.makeText(this@LatestFireActivity, "No Data Received", Toast.LENGTH_SHORT).show()
+        }
     }
 }
