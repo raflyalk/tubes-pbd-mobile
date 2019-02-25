@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/backSecondary"
+        android:background="@color/pureWhite"
         tools:context=".MainActivity">
 
     <LinearLayout
@@ -40,7 +40,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="@string/fire_icon"
-                                android:textSize="20sp"
+                                android:textSize="22sp"
                                 android:textAlignment="center"
                                 android:layout_marginTop="10dp"
                                 android:textColor="@color/pureWhite"/>
@@ -62,7 +62,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="@string/firefighter_icon"
-                                android:textSize="20sp"
+                                android:textSize="22sp"
                                 android:textAlignment="center"
                                 android:textColor="@color/pureWhite"/>
 
@@ -93,9 +93,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:text="@string/fireextinct_icon"
-                                    android:textSize="20sp"
+                                    android:textSize="22sp"
                                     android:textAlignment="center"
-                                    android:layout_marginTop="10dp"
                                     android:textColor="@color/pureWhite"/>
 
                         </LinearLayout>
@@ -115,8 +114,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:text="@string/firealarm_icon"
-                                    android:textSize="20sp"
+                                    android:textSize="22sp"
                                     android:textAlignment="center"
+                                    android:layout_marginTop="10dp"
                                     android:textColor="@color/pureWhite"/>
 
                         </LinearLayout>
