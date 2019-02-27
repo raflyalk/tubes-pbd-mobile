@@ -153,9 +153,9 @@ class ReportActivity : AppCompatActivity() {
                     "geo=" + geoPointVal.latitude.toString() + ", "
                             + geoPointVal.longitude.toString()
                 )
-                val mapIntent = Intent(Intent.ACTION_VIEW, intentUri)
-                mapIntent.setPackage("com.android.apps.map")
-
+                val mapIntent = Intent(Intent.ACTION_VIEW).apply {
+                    data = intentUri
+                }
                 if (mapIntent.resolveActivity(packageManager) != null) {
                     startActivity(mapIntent)
                 }
