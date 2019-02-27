@@ -6,9 +6,20 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorPrimary">@color/pureWhite</item>
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
         <item name="android:textColorSecondary">@color/secondaryTextColor</item>
         <item name="android:textColorTertiary">@color/secondaryTextColor</item>
+        <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
+        <item name="actionBarTheme">@style/AppTheme.ActionBarTheme</item>
+    </style>
+    <style name="AppTheme.ActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="titleTextStyle">@style/MyTitleTextStyle</item>
+    </style>
+    <style name="MyTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/pureWhite</item>
+    </style>
+    <style name="AppTheme.ActionBarTheme">
+        <item name="colorControlNormal">@color/pureWhite</item>
     </style>
     <style name="AppTheme.NoActionBar" parent="AppTheme">
         <item name="windowActionBar">false</item>
