@@ -109,7 +109,7 @@
     <string name="temperature_icon">Check Temperature</string>
 
     <string name="current_temperature">Current Temperature</string>
-    <string name="error_no_sensor">No sensor</string>
+    <string name="error_no_sensor">-</string>
     <string name="label_temperature">%1$.1f°C</string>
 
     <string name="contact_email">muhammad.aufa.helfiandri@gmail.com</string>

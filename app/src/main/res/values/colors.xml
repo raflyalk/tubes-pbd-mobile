@@ -18,4 +18,11 @@
     
     <color name="daynight_textColor">#333333</color>
     <color name="switchColor">#911DEE</color>
+
+    <color name="primaryTextColor">#33343B</color>
+    <color name="secondaryTextColor">#8033343B</color>
+    <color name="backgroundCardColor">#FFFF</color>
+    <color name="dividerColor">#F2F2F3</color>
+    <!--<item name="iconPlaceholder">@drawable/i_light_plholder</item>-->
+
 </resources>

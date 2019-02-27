@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/current_temperature"
-            android:textColor="@color/daynight_textColor"
+            android:textColor="@color/primaryTextColor"
             android:textSize="20sp"/>
 
     <TextView
@@ -23,21 +23,6 @@
             android:layout_height="wrap_content"
             android:textSize="100sp"
             android:text="@string/label_temperature"
-            android:textColor="@color/daynight_textColor"/>
-
-    <android.support.v7.widget.SwitchCompat
-            android:id="@+id/switchCompat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@android:dimen/app_icon_size"
-            android:checked="false"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CLICK ME"
-            android:textColor="@color/daynight_textColor" />
+            android:textColor="@color/primaryTextColor"/>
 
 </LinearLayout>

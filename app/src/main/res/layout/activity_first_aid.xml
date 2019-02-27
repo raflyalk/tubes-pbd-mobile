@@ -40,13 +40,15 @@
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_1_title"
                         android:textSize="@dimen/fontsize_lesson_title"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryTextColor"/>
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_1_body"
-                        android:textSize="@dimen/fontsize_lesson_body"/>
+                        android:textSize="@dimen/fontsize_lesson_body"
+                        android:textColor="@color/secondaryTextColor"/>
 
             </LinearLayout>
 
@@ -70,13 +72,15 @@
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_2_title"
                         android:textSize="@dimen/fontsize_lesson_title"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryTextColor"/>
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_2_body"
-                        android:textSize="@dimen/fontsize_lesson_body"/>
+                        android:textSize="@dimen/fontsize_lesson_body"
+                        android:textColor="@color/secondaryTextColor"/>
 
             </LinearLayout>
 
@@ -100,13 +104,15 @@
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_3_title"
                         android:textSize="@dimen/fontsize_lesson_title"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryTextColor"/>
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_3_body"
-                        android:textSize="@dimen/fontsize_lesson_body"/>
+                        android:textSize="@dimen/fontsize_lesson_body"
+                        android:textColor="@color/secondaryTextColor"/>
 
             </LinearLayout>
 
@@ -130,13 +136,15 @@
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_4_title"
                         android:textSize="@dimen/fontsize_lesson_title"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryTextColor"/>
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_4_body"
-                        android:textSize="@dimen/fontsize_lesson_body"/>
+                        android:textSize="@dimen/fontsize_lesson_body"
+                        android:textColor="@color/secondaryTextColor"/>
 
             </LinearLayout>
 
@@ -160,13 +168,15 @@
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_5_title"
                         android:textSize="@dimen/fontsize_lesson_title"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryTextColor"/>
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_5_body"
-                        android:textSize="@dimen/fontsize_lesson_body"/>
+                        android:textSize="@dimen/fontsize_lesson_body"
+                        android:textColor="@color/secondaryTextColor"/>
 
             </LinearLayout>
 
@@ -190,13 +200,15 @@
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_6_title"
                         android:textSize="@dimen/fontsize_lesson_title"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryTextColor"/>
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_6_body"
-                        android:textSize="@dimen/fontsize_lesson_body"/>
+                        android:textSize="@dimen/fontsize_lesson_body"
+                        android:textColor="@color/secondaryTextColor"/>
 
             </LinearLayout>
 
@@ -220,13 +232,15 @@
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_7_title"
                         android:textSize="@dimen/fontsize_lesson_title"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryTextColor"/>
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_7_body"
-                        android:textSize="@dimen/fontsize_lesson_body"/>
+                        android:textSize="@dimen/fontsize_lesson_body"
+                        android:textColor="@color/secondaryTextColor"/>
 
             </LinearLayout>
 
@@ -250,13 +264,15 @@
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_8_title"
                         android:textSize="@dimen/fontsize_lesson_title"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryTextColor"/>
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/lesson_2_8_body"
-                        android:textSize="@dimen/fontsize_lesson_body"/>
+                        android:textSize="@dimen/fontsize_lesson_body"
+                        android:textColor="@color/secondaryTextColor"/>
 
             </LinearLayout>
 
