@@ -142,4 +142,8 @@
     <string name="lesson_2_8_title">8. Waspadai terjadinya infeksi pada luka</string>
     <string name="lesson_2_8_body">Luka yang tidak kunjung sembuh bisa menjadi pertanda komplikasi, infeksi, atau luka bakar yang lebih serius.</string>
     <string name="geopointLabel">Geo Point</string>
+    <string name="title_activity_latest_fire">Latest Fire</string>
+    <string name="title_activity_temperature_check">Temperature Check</string>
+    <string name="title_activity_first_aid">First Aid Tutorial</string>
+    <string name="title_activity_report">Report Fire</string>
 </resources>

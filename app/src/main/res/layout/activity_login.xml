@@ -72,6 +72,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPassword"
+                        android:textColor="@color/primaryTextColor"
                         android:hint="@string/prompt_password"/>
             </android.support.design.widget.TextInputLayout>
 
@@ -96,7 +97,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="24dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/primaryTextColor"
                         android:textAlignment="center"/>
 
             </LinearLayout>
