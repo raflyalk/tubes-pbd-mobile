@@ -6,10 +6,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorPrimary">@color/primaryTextColor</item>
+        <item name="android:textColorPrimary">@color/pureWhite</item>
     </style>
 
-    <style name="MyDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert"/>
+    <style name="MyDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/pureWhite</item>
+    </style>
 
     <style name="MySwitch">
         <item name="colorControlActivated">@color/switchColor</item>

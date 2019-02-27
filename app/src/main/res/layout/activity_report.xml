@@ -5,16 +5,93 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ReportActivity">
-    <ScrollView
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints">
-        <android.support.v7.widget.RecyclerView
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            android:padding="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:weightSum="3">
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:text="@string/temperatureLabel"
+                android:textColor="@color/primaryTextColor"
+                android:layout_weight="2"/>
+            <TextView
+                android:id="@+id/temperatureRepVal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="3">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dateLabel"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_weight="2"/>
+            <TextView
+                    android:id="@+id/dateRepVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="3">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/locationLabel"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_weight="2"/>
+            <TextView
+                    android:id="@+id/locationRepVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="3">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/geopointLabel"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_weight="2"/>
+            <TextView
+                    android:id="@+id/geopointRepVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_weight="1"/>
+        </LinearLayout>
 
-        </android.support.v7.widget.RecyclerView>
-
-    </ScrollView>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

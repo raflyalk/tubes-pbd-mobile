@@ -14,6 +14,8 @@ import android.widget.Button
 import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.GeoPoint
+import com.google.firebase.Timestamp
+import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -55,9 +57,11 @@ class LatestFireActivity : AppCompatActivity() {
                 list = ArrayList()
                 for (document in result) {
                     val fire = ReportModel()
+                    val dateTemp = document.data["Date"] as Timestamp
 
                     fire.location = document.data["Location"].toString()
-                    fire.date = document.data["Date"].toString()
+
+                    fire.date = dateTemp.toDate().toString()
                     fire.temperature = document.data["Temperature"].toString()
                     fire.user = document.data["User"].toString()
                     list.add(fire)

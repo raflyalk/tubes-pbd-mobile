@@ -28,7 +28,7 @@
     <string name="logo_desc">Freya Logo</string>
     <string name="title_activity_register">Register</string>
     <string name="sign_out">Sign Out</string>
-    <string name="firefighter_icon">Firefighter Near You</string>
+    <string name="firefighter_icon">Emergency Response</string>
     <string name="fire_icon">Place Unsafe</string>
     <string name="fireextinct_icon">Safety Instructions</string>
     <string name="firealarm_icon">Warn Fire</string>
@@ -141,4 +141,5 @@
     <string name="lesson_2_7_body">Obat rumahan seperti putih telur, mentega, dan teh dapat "memperparah" luka karena mengandung bakteri pemicu infeksi.</string>
     <string name="lesson_2_8_title">8. Waspadai terjadinya infeksi pada luka</string>
     <string name="lesson_2_8_body">Luka yang tidak kunjung sembuh bisa menjadi pertanda komplikasi, infeksi, atau luka bakar yang lebih serius.</string>
+    <string name="geopointLabel">Geo Point</string>
 </resources>
