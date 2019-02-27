@@ -103,6 +103,7 @@
                     android:id="@+id/loc_btn"
                     android:layout_weight="1"
                     android:text="@string/googleMapButton"
+                    android:textColor="@color/pureWhite"
                     android:background="@color/cornflower_blue"/>
 
             <LinearLayout
@@ -115,6 +116,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/report_button"
                     android:layout_weight="1"
+                    android:textColor="@color/pureWhite"
                     android:text="@string/reportButton"
                     android:background="@color/cornflower_blue"/>
         </LinearLayout>
