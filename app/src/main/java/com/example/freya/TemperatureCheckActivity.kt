@@ -19,7 +19,7 @@ import android.widget.Button
 class TemperatureCheckActivity : AppCompatActivity(), SensorEventListener {
     override fun onSensorChanged(event: SensorEvent?) {
         var currentValue = event!!.values[0]
-        mTextSensorTemperature!!.text = getResources().getString(
+        mTextSensorTemperature!!.text = resources.getString(
             R.string.label_temperature, currentValue)
     }
 

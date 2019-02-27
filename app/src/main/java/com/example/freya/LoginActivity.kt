@@ -68,7 +68,7 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         }
         setContentView(R.layout.activity_login)
 
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference()
+        mDatabaseRef = FirebaseDatabase.getInstance().reference
         mFirebaseAuth = FirebaseAuth.getInstance()
 
         if (mFirebaseAuth.currentUser != null) {
@@ -142,14 +142,14 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         }
 
         mFirebaseAuth.signInWithEmailAndPassword(n_email, n_password)
-            .addOnCompleteListener(this, OnCompleteListener<AuthResult>() { task: Task<AuthResult> ->
+            .addOnCompleteListener(this, OnCompleteListener<AuthResult> { task: Task<AuthResult> ->
                 if (task.isSuccessful) {
                     Log.d(TAG, "signInWithEmail:success")
                     val firebaseUser = mFirebaseAuth.currentUser!!
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                 } else {
-                    Log.w(TAG, "signInWithEmail:failure", task.getException())
+                    Log.w(TAG, "signInWithEmail:failure", task.exception)
                     Toast.makeText(this, "Authentication failed.", Toast.LENGTH_SHORT).show()
                 }
             })
@@ -158,17 +158,17 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     private fun validateForm(): Boolean {
         var result = true
         if (TextUtils.isEmpty(inputEmail.text)) {
-            inputEmail.setError("Required")
+            inputEmail.error = "Required"
             result = false
         } else {
-            inputEmail.setError(null)
+            inputEmail.error = null
         }
 
         if (TextUtils.isEmpty(inputPassword.text.toString())) {
-            inputPassword.setError("Required")
+            inputPassword.error = "Required"
             result = false
         } else {
-            inputPassword.setError(null)
+            inputPassword.error = null
         }
         return result
     }

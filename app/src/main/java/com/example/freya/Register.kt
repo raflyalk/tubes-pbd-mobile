@@ -40,7 +40,7 @@ class Register : AppCompatActivity() {
         setContentView(R.layout.activity_register)
         setSupportActionBar(toolbar)
 
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference()
+        mDatabaseRef = FirebaseDatabase.getInstance().reference
         auth = FirebaseAuth.getInstance()
 
         if (auth.currentUser != null) {
@@ -95,7 +95,7 @@ class Register : AppCompatActivity() {
         println("Masuk")
 
         auth.createUserWithEmailAndPassword(n_email, n_password)
-            .addOnCompleteListener(this, OnCompleteListener<AuthResult>() { task: Task<AuthResult> ->
+            .addOnCompleteListener(this, OnCompleteListener<AuthResult> { task: Task<AuthResult> ->
                 try {
                     if (task.isSuccessful) {
                         Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT).show()
@@ -114,23 +114,23 @@ class Register : AppCompatActivity() {
     private fun validateForm(): Boolean {
         var result = true
         if (TextUtils.isEmpty(inputEmail.text)) {
-            inputEmail.setError("Required")
+            inputEmail.error = "Required"
             result = false
         } else {
-            inputEmail.setError(null)
+            inputEmail.error = null
         }
 
         if (TextUtils.isEmpty(inputPassword.text.toString())) {
-            inputPassword.setError("Required")
+            inputPassword.error = "Required"
             result = false
         } else {
-            inputPassword.setError(null)
+            inputPassword.error = null
         }
         if (TextUtils.isEmpty(inputConfirmPassword.text.toString())) {
-            inputConfirmPassword.setError("Required")
+            inputConfirmPassword.error = "Required"
             result = false
         } else {
-            inputPassword.setError(null)
+            inputPassword.error = null
         }
         return result
     }

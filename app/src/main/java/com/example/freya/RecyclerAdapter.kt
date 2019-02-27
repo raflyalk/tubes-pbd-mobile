@@ -43,10 +43,10 @@ class RecyclerAdapter(lst: List<ReportModel>, cntx: Context) : RecyclerView.Adap
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
         val myList = reportList.get(position)
-        holder.location.setText(myList.location)
-        holder.date.setText(myList.date)
-        holder.temperature.setText(myList.temperature)
-        holder.user.setText(myList.user)
+        holder.location.text = myList.location
+        holder.date.text = myList.date
+        holder.temperature.text = myList.temperature
+        holder.user.text = myList.user
     }
 
     override fun getItemCount(): Int {

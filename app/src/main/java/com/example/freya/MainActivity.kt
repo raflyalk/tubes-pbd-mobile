@@ -114,7 +114,7 @@ class MainActivity : AppCompatActivity() , SensorEventListener, GoogleApiClient.
 
     private fun firefighterOnClick() {
         val mailClient = Intent(Intent.ACTION_SEND)
-        mailClient.setType("text/html")
+        mailClient.type = "text/html"
         mailClient.putExtra(Intent.EXTRA_EMAIL, Array<String>(1) { getString(R.string.contact_email) })
         mailClient.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.default_subject))
         mailClient.putExtra(Intent.EXTRA_TEXT, getString(R.string.default_body))
@@ -171,8 +171,8 @@ class MainActivity : AppCompatActivity() , SensorEventListener, GoogleApiClient.
                 lastUpdate = curTime
 
                 var x = event!!.values[SensorManager.DATA_X]
-                var y = event!!.values[SensorManager.DATA_Y]
-                var z = event!!.values[SensorManager.DATA_Z]
+                var y = event.values[SensorManager.DATA_Y]
+                var z = event.values[SensorManager.DATA_Z]
 
                 val speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000
 

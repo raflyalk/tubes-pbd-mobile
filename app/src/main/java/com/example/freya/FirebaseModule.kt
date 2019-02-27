@@ -1,6 +1,4 @@
 package com.example.freya
 
 
-class FirebaseModule {
-
-}
+class FirebaseModule
