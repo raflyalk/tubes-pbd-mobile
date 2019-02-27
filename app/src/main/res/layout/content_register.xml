@@ -10,7 +10,6 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:background="@color/backSecondary"
         tools:context=".LoginActivity">
 
     <!-- Register progress -->
@@ -48,7 +47,7 @@
             <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/greyishBlack"
+                    android:textColorHint="@color/secondaryTextColor"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp">
                 <AutoCompleteTextView
@@ -56,7 +55,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress"
-                        android:textColor="@color/black"
+                        android:textColor="@color/primaryTextColor"
                         android:hint="@string/prompt_email"/>
             </android.support.design.widget.TextInputLayout>
 
@@ -64,8 +63,8 @@
             <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/greyishBlack"
-                    android:textColor="@color/black"
+                    android:textColorHint="@color/secondaryTextColor"
+                    android:textColor="@color/primaryTextColor"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp">
                 <EditText
@@ -78,8 +77,8 @@
             <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/greyishBlack"
-                    android:textColor="@color/black"
+                    android:textColorHint="@color/secondaryTextColor"
+                    android:textColor="@color/primaryTextColor"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp">
                 <EditText
@@ -102,8 +101,8 @@
                         android:layout_marginTop="24dp"
                         android:layout_marginBottom="10dp"
                         android:padding="12dp"
-                        android:textColor="@color/pureWhite"
-                        android:background="@color/backTertiary"
+                        android:textColor="@color/primaryTextColor"
+                        android:background="@drawable/patchimage"
                         android:textAlignment="center"
                         android:text="@string/action_register"/>
                 <com.google.android.gms.common.SignInButton
@@ -111,7 +110,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="24dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/primaryTextColor"
                         android:textAlignment="center"/>
 
             </LinearLayout>
