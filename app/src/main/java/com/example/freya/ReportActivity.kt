@@ -2,10 +2,12 @@ package com.example.freya
 
 import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.location.Geocoder
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
+import android.net.Uri
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.support.v4.app.ActivityCompat
@@ -142,10 +144,28 @@ class ReportActivity : AppCompatActivity() {
                 sendToFirebase()
             }
             thread.start()
-            if (!thread.isAlive){
-                Toast.makeText(baseContext,"Location still Loading",Toast.LENGTH_SHORT).show()
-            }
+        }
 
+        mapBtn.setOnClickListener {
+            Log.d("Test","Enter")
+            try {
+                val intentUri = Uri.parse(
+                    "geo=" + geoPointVal.latitude.toString() + ", "
+                            + geoPointVal.longitude.toString()
+                )
+                val mapIntent = Intent(Intent.ACTION_VIEW, intentUri)
+                mapIntent.setPackage("com.android.apps.map")
+
+                if (mapIntent.resolveActivity(packageManager) != null) {
+                    startActivity(mapIntent)
+                }
+                else{
+                    Toast.makeText(baseContext,"No Application Found",Toast.LENGTH_SHORT).show()
+                }
+            }
+            catch (e : Exception){
+                Toast.makeText(baseContext,"Location Not Found",Toast.LENGTH_SHORT).show()
+            }
         }
 
 
@@ -162,13 +182,22 @@ class ReportActivity : AppCompatActivity() {
         docData.put("date",dateVal)
         try{
             docData.put("geopoint",geoPointVal)
-            docData.put("location",locationVal)
+            if (locationVal.equals("GeoLocation Error")) {
+                locationVal = geoLocToLoc(geoPointVal)
+                docData.put("location",locationVal)
+            }
+            else{
+                docData.put("location", locationVal)
+            }
             errorLoc = false
+            runOnUiThread({
+                Toast.makeText(baseContext,"Data Sent Successfully!",Toast.LENGTH_SHORT).show()
+            })
         }
         catch (e : Exception){
             Log.d("Error","Location still Loading")
             errorLoc = true
-            runOnUiThread(Runnable {
+            runOnUiThread({
                 Toast.makeText(baseContext,"Location still Loading",Toast.LENGTH_SHORT).show()
             })
             return
