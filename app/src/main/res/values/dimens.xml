@@ -16,6 +16,7 @@
     <dimen name="lesson_main_margin_horizontal">20dp</dimen>
     <dimen name="lesson_main_margin_vertical">10dp</dimen>
     <dimen name="lesson_object_margin_vertical">5dp</dimen>
+    <dimen name="lesson_object_margin_horizontal">5dp</dimen>
     <dimen name="lesson_object_padding">10dp</dimen>
     <dimen name="lesson_object_image_height">200dp</dimen>
 

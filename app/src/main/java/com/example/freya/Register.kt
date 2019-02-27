@@ -38,7 +38,6 @@ class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-        setSupportActionBar(toolbar)
 
         mDatabaseRef = FirebaseDatabase.getInstance().reference
         auth = FirebaseAuth.getInstance()

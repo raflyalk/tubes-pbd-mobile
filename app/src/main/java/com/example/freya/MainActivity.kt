@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() , SensorEventListener, GoogleApiClient.
             latestFireOnClick()
         }
 
-        firefighterBtn = findViewById(R.id.firefighter_btn)
+        firefighterBtn = findViewById(R.id.contact_us_btn)
         firefighterBtn.setOnClickListener {
             firefighterOnClick()
         }

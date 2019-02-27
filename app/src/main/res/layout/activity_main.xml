@@ -15,175 +15,418 @@
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/lesson_main_margin_vertical"
+                    android:layout_marginBottom="@dimen/lesson_main_margin_vertical"
+                    android:layout_marginStart="@dimen/home_main_margin_horizontal"
+                    android:layout_marginEnd="@dimen/home_main_margin_horizontal"
+                    android:paddingBottom="@dimen/lesson_main_margin_vertical"
                     android:orientation="vertical">
+
+                <LinearLayout
+                        android:id="@+id/report_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/patchimage"
+                        android:orientation="vertical"
+                        android:padding="@dimen/lesson_object_padding"
+                        android:layout_marginTop="@dimen/lesson_object_margin_vertical"
+                        android:layout_marginBottom="@dimen/lesson_object_margin_vertical">
+
+                    <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/home_object_image_height"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/fire" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_activity_report"
+                            android:textSize="@dimen/fontsize_lesson_title"
+                            android:textStyle="bold"
+                            android:textColor="@color/primaryTextColor"/>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/caption_activity_report"
+                            android:textSize="@dimen/fontsize_lesson_body"
+                            android:textColor="@color/secondaryTextColor"/>
+
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                    <LinearLayout
+                            android:id="@+id/latest_fire_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/patchimage"
+                            android:orientation="vertical"
+                            android:padding="@dimen/lesson_object_padding"
+                            android:layout_marginTop="@dimen/lesson_object_margin_vertical"
+                            android:layout_marginBottom="@dimen/lesson_object_margin_vertical"
+                            android:layout_marginRight="@dimen/lesson_object_margin_horizontal">
+
+                        <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/home_object_image_height"
+                                android:scaleType="centerInside"
+                                android:src="@mipmap/time" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_activity_latest_fire"
+                                android:textSize="@dimen/fontsize_lesson_title"
+                                android:textStyle="bold"
+                                android:textColor="@color/primaryTextColor"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:id="@+id/first_aid_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/patchimage"
+                            android:orientation="vertical"
+                            android:padding="@dimen/lesson_object_padding"
+                            android:layout_marginTop="@dimen/lesson_object_margin_vertical"
+                            android:layout_marginBottom="@dimen/lesson_object_margin_vertical"
+                            android:layout_marginLeft="@dimen/lesson_object_margin_horizontal">
+
+                        <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/home_object_image_height"
+                                android:scaleType="centerInside"
+                                android:src="@mipmap/first_aid" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_activity_first_aid"
+                                android:textSize="@dimen/fontsize_lesson_title"
+                                android:textStyle="bold"
+                                android:textColor="@color/primaryTextColor"/>
+
+                    </LinearLayout>
+                </LinearLayout>
 
                 <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingTop="20dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp"
+                        android:orientation="horizontal"
                         android:weightSum="2">
+
                     <LinearLayout
-                            android:id="@+id/latest_fire_btn"
+                            android:id="@+id/check_temp_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:layout_width="match_parent"
-                            android:layout_height="160dp"
-                            android:layout_marginRight="10dp"
-                            android:background="@color/royalBlue"
-                            android:orientation="vertical">
+                            android:background="@drawable/patchimage"
+                            android:orientation="vertical"
+                            android:padding="@dimen/lesson_object_padding"
+                            android:layout_marginTop="@dimen/lesson_object_margin_vertical"
+                            android:layout_marginBottom="@dimen/lesson_object_margin_vertical"
+                            android:layout_marginRight="@dimen/lesson_object_margin_horizontal">
+
                         <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="102dp"
-                                android:src="@drawable/fire_icon"/>
+                                android:layout_height="@dimen/home_object_image_height"
+                                android:scaleType="centerInside"
+                                android:src="@mipmap/thermometer" />
+
                         <TextView
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/fire_icon"
-                                android:textSize="22sp"
-                                android:textAlignment="center"
-                                android:layout_marginTop="10dp"
-                                android:textColor="@color/pureWhite"/>
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_activity_temperature_check"
+                                android:textSize="@dimen/fontsize_lesson_title"
+                                android:textStyle="bold"
+                                android:textColor="@color/primaryTextColor"/>
 
                     </LinearLayout>
 
                     <LinearLayout
-                            android:id="@+id/firefighter_btn"
+                            android:id="@+id/settings_btn"
+                            android:layout_width="wrap_content"
                             android:layout_weight="1"
-                            android:layout_width="match_parent"
-                            android:layout_height="160dp"
-                            android:layout_marginLeft="10dp"
-                            android:background="@color/royalBlue"
-                            android:orientation="vertical">
+                            android:layout_height="match_parent"
+                            android:background="@drawable/patchimage"
+                            android:orientation="vertical"
+                            android:padding="@dimen/lesson_object_padding"
+                            android:layout_marginTop="@dimen/lesson_object_margin_vertical"
+                            android:layout_marginBottom="@dimen/lesson_object_margin_vertical"
+                            android:layout_marginLeft="@dimen/lesson_object_margin_horizontal">
+
                         <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="102dp"
-                                android:src="@drawable/firefighter_icon"/>
+                                android:layout_height="@dimen/home_object_image_height"
+                                android:scaleType="centerInside"
+                                android:src="@mipmap/settings" />
+
                         <TextView
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/firefighter_icon"
-                                android:textSize="22sp"
-                                android:textAlignment="center"
-                                android:textColor="@color/pureWhite"/>
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_activity_settings"
+                                android:textSize="@dimen/fontsize_lesson_title"
+                                android:textStyle="bold"
+                                android:textColor="@color/primaryTextColor"/>
 
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
+                        android:id="@+id/contact_us_btn"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/patchimage"
+                        android:orientation="vertical"
+                        android:padding="@dimen/lesson_object_padding"
+                        android:layout_marginTop="@dimen/lesson_object_margin_vertical"
+                        android:layout_marginBottom="@dimen/lesson_object_margin_vertical">
+
+                    <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:paddingTop="20dp"
-                            android:paddingLeft="20dp"
-                            android:paddingRight="20dp"
-                            android:weightSum="2">
-                        <LinearLayout
-                                android:id="@+id/first_aid_btn"
-                                android:layout_weight="1"
-                                android:layout_width="match_parent"
-                                android:layout_height="160dp"
-                                android:layout_marginRight="10dp"
-                                android:background="@color/royalBlue"
-                                android:orientation="vertical">
-                            <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="102dp"
-                                    android:src="@drawable/fireextinct_icon"/>
-                            <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/fireextinct_icon"
-                                    android:textSize="22sp"
-                                    android:textAlignment="center"
-                                    android:textColor="@color/pureWhite"/>
+                            android:text="@string/contact_us"
+                            android:textSize="@dimen/fontsize_lesson_title"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:textColor="@color/primaryTextColor"/>
 
-                        </LinearLayout>
-
-                        <LinearLayout
-                                android:id="@+id/report_btn"
-                                android:layout_weight="1"
-                                android:layout_width="match_parent"
-                                android:layout_height="160dp"
-                                android:layout_marginLeft="10dp"
-                                android:background="@color/royalBlue"
-                                android:orientation="vertical">
-                            <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="102dp"
-                                    android:src="@drawable/firealarm_icon"/>
-                            <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/firealarm_icon"
-                                    android:textSize="22sp"
-                                    android:textAlignment="center"
-                                    android:layout_marginTop="10dp"
-                                    android:textColor="@color/pureWhite"/>
-
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:paddingTop="20dp"
-                            android:paddingLeft="20dp"
-                            android:paddingRight="20dp"
-                            android:weightSum="2">
-                        <LinearLayout
-                                android:id="@+id/check_temp_btn"
-                                android:layout_weight="1"
-                                android:layout_width="match_parent"
-                                android:layout_height="160dp"
-                                android:layout_marginRight="10dp"
-                                android:background="@color/royalBlue"
-                                android:orientation="vertical">
-                            <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="102dp"
-                                    android:src="@drawable/temperature_icon"/>
-                            <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/temperature_icon"
-                                    android:textSize="22sp"
-                                    android:textAlignment="center"
-                                    android:textColor="@color/pureWhite"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                                android:id="@+id/settings_btn"
-                                android:layout_weight="1"
-                                android:layout_width="match_parent"
-                                android:layout_height="160dp"
-                                android:layout_marginLeft="10dp"
-                                android:background="@color/royalBlue"
-                                android:orientation="vertical">
-                            <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="102dp"
-                                    android:src="@drawable/settings_icon"/>
-                            <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/settings_icon"
-                                    android:textSize="22sp"
-                                    android:textAlignment="center"
-                                    android:layout_marginTop="10dp"
-                                    android:textColor="@color/pureWhite"/>
-
-                        </LinearLayout>
-                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
+            <!--<ScrollView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+            <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+                <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingTop="20dp"-->
+                        <!--android:paddingLeft="20dp"-->
+                        <!--android:paddingRight="20dp"-->
+                        <!--android:weightSum="2">-->
+                    <!--<LinearLayout-->
+                            <!--android:id="@+id/latest_fire_btn"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="160dp"-->
+                            <!--android:layout_marginRight="10dp"-->
+                            <!--android:background="@color/royalBlue"-->
+                            <!--android:orientation="vertical">-->
+                        <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="102dp"-->
+                                <!--android:src="@drawable/fire_icon"/>-->
+                        <!--<TextView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:text="@string/fire_icon"-->
+                                <!--android:textSize="22sp"-->
+                                <!--android:textAlignment="center"-->
+                                <!--android:layout_marginTop="10dp"-->
+                                <!--android:textColor="@color/pureWhite"/>-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                            <!--android:id="@+id/contact_us_btn"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="160dp"-->
+                            <!--android:layout_marginLeft="10dp"-->
+                            <!--android:background="@color/royalBlue"-->
+                            <!--android:orientation="vertical">-->
+                        <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="102dp"-->
+                                <!--android:src="@drawable/firefighter_icon"/>-->
+                        <!--<TextView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:text="@string/firefighter_icon"-->
+                                <!--android:textSize="22sp"-->
+                                <!--android:textAlignment="center"-->
+                                <!--android:textColor="@color/pureWhite"/>-->
+
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content">-->
+                    <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:paddingTop="20dp"-->
+                            <!--android:paddingLeft="20dp"-->
+                            <!--android:paddingRight="20dp"-->
+                            <!--android:weightSum="2">-->
+                        <!--<LinearLayout-->
+                                <!--android:id="@+id/first_aid_btn"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="160dp"-->
+                                <!--android:layout_marginRight="10dp"-->
+                                <!--android:background="@color/royalBlue"-->
+                                <!--android:orientation="vertical">-->
+                            <!--<ImageView-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="102dp"-->
+                                    <!--android:src="@drawable/fireextinct_icon"/>-->
+                            <!--<TextView-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="match_parent"-->
+                                    <!--android:text="@string/fireextinct_icon"-->
+                                    <!--android:textSize="22sp"-->
+                                    <!--android:textAlignment="center"-->
+                                    <!--android:textColor="@color/pureWhite"/>-->
+
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                                <!--android:id="@+id/report_btn"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="160dp"-->
+                                <!--android:layout_marginLeft="10dp"-->
+                                <!--android:background="@color/royalBlue"-->
+                                <!--android:orientation="vertical">-->
+                            <!--<ImageView-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="102dp"-->
+                                    <!--android:src="@drawable/firealarm_icon"/>-->
+                            <!--<TextView-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="match_parent"-->
+                                    <!--android:text="@string/firealarm_icon"-->
+                                    <!--android:textSize="22sp"-->
+                                    <!--android:textAlignment="center"-->
+                                    <!--android:layout_marginTop="10dp"-->
+                                    <!--android:textColor="@color/pureWhite"/>-->
+
+                        <!--</LinearLayout>-->
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content">-->
+                    <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:paddingTop="20dp"-->
+                            <!--android:paddingLeft="20dp"-->
+                            <!--android:paddingRight="20dp"-->
+                            <!--android:weightSum="2">-->
+                        <!--<LinearLayout-->
+                                <!--android:id="@+id/check_temp_btn"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="160dp"-->
+                                <!--android:layout_marginRight="10dp"-->
+                                <!--android:background="@color/royalBlue"-->
+                                <!--android:orientation="vertical">-->
+                            <!--<ImageView-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="102dp"-->
+                                    <!--android:src="@drawable/temperature_icon"/>-->
+                            <!--<TextView-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="match_parent"-->
+                                    <!--android:text="@string/temperature_icon"-->
+                                    <!--android:textSize="22sp"-->
+                                    <!--android:textAlignment="center"-->
+                                    <!--android:textColor="@color/pureWhite"/>-->
+
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                                <!--android:id="@+id/settings_btn"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="160dp"-->
+                                <!--android:layout_marginLeft="10dp"-->
+                                <!--android:background="@color/royalBlue"-->
+                                <!--android:orientation="vertical">-->
+                            <!--<ImageView-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="102dp"-->
+                                    <!--android:src="@drawable/settings_icon"/>-->
+                            <!--<TextView-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="match_parent"-->
+                                    <!--android:text="@string/settings_icon"-->
+                                    <!--android:textSize="22sp"-->
+                                    <!--android:textAlignment="center"-->
+                                    <!--android:layout_marginTop="10dp"-->
+                                    <!--android:textColor="@color/pureWhite"/>-->
+
+                        <!--</LinearLayout>-->
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
         </ScrollView>
     </LinearLayout>
+
+    <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+    <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/lesson_main_margin_vertical"-->
+            <!--android:layout_marginBottom="@dimen/lesson_main_margin_vertical"-->
+            <!--android:layout_marginStart="@dimen/home_main_margin_horizontal"-->
+            <!--android:layout_marginEnd="@dimen/home_main_margin_horizontal"-->
+            <!--android:paddingBottom="@dimen/lesson_main_margin_vertical"-->
+            <!--android:orientation="vertical">-->
+
+    <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/patchimage"-->
+            <!--android:orientation="vertical"-->
+            <!--android:padding="@dimen/lesson_object_padding"-->
+            <!--android:layout_marginTop="@dimen/lesson_object_margin_vertical"-->
+            <!--android:layout_marginBottom="@dimen/lesson_object_margin_vertical">-->
+
+        <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/lesson_object_image_height"-->
+                <!--android:scaleType="centerInside"-->
+                <!--android:src="@mipmap/lesson_2_1" />-->
+
+        <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/lesson_2_1_title"-->
+                <!--android:textSize="@dimen/fontsize_lesson_title"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="@color/primaryTextColor"/>-->
+
+        <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/lesson_2_1_body"-->
+                <!--android:textSize="@dimen/fontsize_lesson_body"-->
+                <!--android:textColor="@color/secondaryTextColor"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--</ScrollView>-->
 
 </android.support.constraint.ConstraintLayout>

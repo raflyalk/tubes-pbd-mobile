@@ -19,28 +19,29 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".LatestFireActivity">
+        <activity android:name=".LatestFireActivity"
+        android:label="@string/title_activity_latest_fire">
         </activity>
-        <activity android:name=".TemperatureCheckActivity">
+        <activity android:name=".TemperatureCheckActivity"
+        android:label="@string/title_activity_temperature_check">
         </activity>
         <activity
                 android:name=".SettingsActivity"
                 android:label="@string/title_activity_settings">
         </activity>
-        <activity android:name=".FirstAidActivity">
+        <activity android:name=".FirstAidActivity"
+        android:label="@string/title_activity_first_aid">
         </activity>
-        <activity android:name=".ReportActivity">
-        </activity>
-        <activity android:name=".StartPageActivity">
+        <activity android:name=".ReportActivity"
+        android:label="@string/title_activity_report">
         </activity>
         <activity
                 android:name=".Register"
-                android:label="@string/title_activity_register"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
                 android:name=".LoginActivity"
-                android:label="@string/title_activity_login">
+                android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
