@@ -92,6 +92,33 @@
                     android:layout_weight="1"/>
         </LinearLayout>
 
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:orientation="horizontal">
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/loc_btn"
+                    android:layout_weight="1"
+                    android:text="@string/googleMapButton"
+                    android:background="@color/cornflower_blue"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/report_button"
+                    android:layout_weight="1"
+                    android:text="@string/reportButton"
+                    android:background="@color/cornflower_blue"/>
+        </LinearLayout>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
