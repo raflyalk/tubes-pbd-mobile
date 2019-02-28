@@ -57,15 +57,14 @@ class LatestFireActivity : AppCompatActivity() {
                 list = ArrayList()
                 for (document in result) {
                     val fire = ReportModel()
-                    val dateTemp = document.data["Date"] as Timestamp
+                    val dateTemp = document.data["date"] as Timestamp
 
-                    fire.location = document.data["Location"].toString()
+                    fire.location = document.data["location"].toString()
 
                     fire.date = dateTemp.toDate().toString()
-                    fire.temperature = document.data["Temperature"].toString()
-                    fire.user = document.data["User"].toString()
+                    fire.temperature = document.data["temperature"].toString()
+                    fire.user = document.data["user"].toString()
                     list.add(fire)
-                    Log.d("datatata", document.id + " => " + document.data)
                 }
                 updateRecyclerView()
             }
