@@ -36,18 +36,11 @@ class LatestFireActivity : AppCompatActivity() {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
         setContentView(R.layout.activity_latest_fire)
-        view = findViewById<View>(R.id.view) as Button
         recycle = findViewById<View>(R.id.recycle) as RecyclerView
 
         db = FirebaseFirestore.getInstance()
 
         fetchData()
-
-        view.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View) {
-                fetchData()
-            }
-        })
     }
 
     private fun fetchData() {

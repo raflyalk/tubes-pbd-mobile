@@ -3,8 +3,7 @@
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/greyishBlue">
+                android:layout_height="wrap_content">
     <android.support.v7.widget.CardView
             android:id="@+id/card_view"
             android:layout_width="match_parent"
@@ -17,7 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:weightSum="4">
+            android:weightSum="4"
+    android:padding="@dimen/lesson_object_padding">
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -28,12 +28,16 @@
                     android:text="@string/locationLabel"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+            android:textSize="@dimen/fontsize_lesson_body"
+            android:textColor="@color/secondaryTextColor"/>
             <TextView
                     android:id="@+id/locationVal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textSize="@dimen/fontsize_lesson_body"
+                    android:textColor="@color/secondaryTextColor"/>
         </LinearLayout>
         <LinearLayout
                 android:layout_width="match_parent"
@@ -44,12 +48,16 @@
                     android:text="@string/dateLabel"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:textSize="@dimen/fontsize_lesson_body"
+                    android:textColor="@color/secondaryTextColor"/>
             <TextView
                     android:id="@+id/dateVal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textSize="@dimen/fontsize_lesson_body"
+                    android:textColor="@color/secondaryTextColor"/>
         </LinearLayout>
         <LinearLayout
                 android:layout_width="match_parent"
@@ -60,12 +68,16 @@
                     android:text="@string/temperatureLabel"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:textSize="@dimen/fontsize_lesson_body"
+                    android:textColor="@color/secondaryTextColor"/>
             <TextView
                     android:id="@+id/temperatureVal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textSize="@dimen/fontsize_lesson_body"
+                    android:textColor="@color/secondaryTextColor"/>
         </LinearLayout>
         <LinearLayout
                 android:layout_width="match_parent"
@@ -76,12 +88,16 @@
                     android:text="@string/userLabel"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:textSize="@dimen/fontsize_lesson_body"
+                    android:textColor="@color/secondaryTextColor"/>
             <TextView
                     android:id="@+id/userVal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:textSize="@dimen/fontsize_lesson_body"
+                    android:textColor="@color/secondaryTextColor"/>
         </LinearLayout>
     </LinearLayout>
     </android.support.v7.widget.CardView>
