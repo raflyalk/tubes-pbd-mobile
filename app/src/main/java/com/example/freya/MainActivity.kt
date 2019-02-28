@@ -5,6 +5,7 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import android.net.Uri
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
@@ -113,9 +114,9 @@ class MainActivity : AppCompatActivity() , SensorEventListener, GoogleApiClient.
     }
 
     private fun firefighterOnClick() {
-        val mailClient = Intent(Intent.ACTION_SEND)
-        mailClient.type = "text/html"
-        mailClient.putExtra(Intent.EXTRA_EMAIL, Array<String>(1) { getString(R.string.contact_email) })
+        val mailClient = Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "cs@freya.id", null))
+//        mailClient.type = "text/html"
+//        mailClient.putExtra(Intent.EXTRA_EMAIL, Array<String>(1) { getString(R.string.contact_email) })
         mailClient.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.default_subject))
         mailClient.putExtra(Intent.EXTRA_TEXT, getString(R.string.default_body))
         startActivity(Intent.createChooser(mailClient, "Send Email"))

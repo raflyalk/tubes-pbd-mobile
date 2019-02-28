@@ -112,9 +112,9 @@
     <string name="error_no_sensor">-</string>
     <string name="label_temperature">%1$.1f°C</string>
 
-    <string name="contact_email">muhammad.aufa.helfiandri@gmail.com</string>
-    <string name="default_subject">Ada Kebakaran</string>
-    <string name="default_body">Halo Dunia</string>
+    <string name="contact_email">cs@freya.id</string>
+    <string name="default_subject">CS Report</string>
+    <string name="default_body">Dear Freya Customer Service,</string>
 
     <!--String Related to LatestFireActivity-->
     <string name="locationLabel">Location</string>
